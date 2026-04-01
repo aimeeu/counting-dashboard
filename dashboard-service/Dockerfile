@@ -9,8 +9,9 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copy custom nginx configuration
 COPY nginx.conf /etc/nginx/nginx.conf
 
-# Copy dashboard HTML
+# Copy dashboard files
 COPY index.html /usr/share/nginx/html/
+COPY config.js /usr/share/nginx/html/
 
 # Create log directory
 RUN mkdir -p /var/log/nginx && \

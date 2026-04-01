@@ -215,9 +215,12 @@
         </div>
     </div>
 
+    <!-- Load configuration from Nomad template (if available) -->
+    <script src="config.js"></script>
+
     <script>
         // Configuration - can be overridden by environment
-        const COUNTING_SERVICE_URL = window.COUNTING_SERVICE_URL || 
+        const COUNTING_SERVICE_URL = window.COUNTING_SERVICE_URL ||
             (window.location.hostname === 'localhost' 
                 ? 'http://localhost:9001' 
                 : 'http://counting-service:9001');
